@@ -3,7 +3,7 @@ version: '3'
 services:
   web:
     build: .
-    command: ['./scripts/dev.sh']
+    command: ['scripts/dev.sh']
     volumes:
       - .:/code
     ports:
