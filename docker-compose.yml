@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: ['./scripts/dev.sh']
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
