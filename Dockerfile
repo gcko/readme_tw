@@ -3,6 +3,7 @@ MAINTAINER Jared Scott <jared@variable.team>
 
 RUN apk add --update \
     git \
+    util-linux \
     && rm -rf /var/cache/apk/*
 
 RUN mkdir /code

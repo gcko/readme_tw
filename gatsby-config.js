@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Readme Taiwan',
+    siteDescription: 'Readme Taiwan helps interested software developers find relevant meetups that are occurring in Taiwan',
+    siteKeywords: 'Software Development, Software, Frontend, Front-end, backend, back-end, Javascript, JS, React, Mobile, development, meetups, meetings, Taichung, Taiwan, Taipei'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,6 +25,13 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        // implementation: require("sass"),
+        precision: 8
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
