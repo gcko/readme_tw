@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
+import Menu from './menu'
+import './reset.sass'
 import './layout.sass'
 
-const Layout = ({ children }) => (
+const Layout = ({ bodyClass, children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -30,15 +31,8 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px .2rem .2rem',
-            paddingTop: 0,
-          }}
-        >
+        <Menu siteTitle={data.site.siteMetadata.title} />
+        <div className={`layout-content${bodyClass ? ` ${bodyClass}` : ''}`} >
           {children}
         </div>
       </>

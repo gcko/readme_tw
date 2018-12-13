@@ -1,0 +1,20 @@
+.menu
+    position: sticky
+    top: 0
+    padding: .2rem .5rem .2rem 0
+    background: darkslateblue
+    .menu-links
+        display: flex
+        justify-content: center
+
+        .menu-item
+            + .menu-item
+                padding: 0 0 0 1rem
+        .menu-link
+            color: white
+            text-decoration: none
+            font-weight: normal
+
+@media (max-width: 576px)
+    .menu
+        position: relative
