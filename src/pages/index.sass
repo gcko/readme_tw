@@ -1,13 +1,33 @@
 header.hero-header
+  position: relative
   display: flex
   align-items: center
-  justify-content: center
+  justify-content: flex-start
   flex-direction: column
   flex-wrap: nowrap
 
-  min-height: 95vh
-  background-color: #B0C4DE9A
-  .hero-content
+  min-height: 93vh
+  &::before
+    position: fixed
+    display: block
+    left: -1vw
+    top: -1vh
+    width: 102vw
+    height: 102vh
+    z-index: -1
+    content: ""
 
-    h1
+    background-image: url("../images/IMG_0763.jpg")
+    background-color: #2ac197
+    background-blend-mode: overlay
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: cover
+    filter: blur(6px)
+  .hero-content
+    margin-top: 15vh
+    > h1
       color: white
+
+.some-other-content
+  background: #FFFFFF // keeps the blur from bleeding through

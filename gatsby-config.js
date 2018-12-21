@@ -1,8 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: 'Readme Taiwan',
-    siteDescription: 'Readme Taiwan helps interested software developers find relevant meetups that are occurring in Taiwan',
-    siteKeywords: 'Software Development, Software, Frontend, Front-end, backend, back-end, Javascript, JS, React, Mobile, development, meetups, meetings, Taichung, Taiwan, Taipei'
+    title: 'readme Taiwan',
+    siteDescription: 'readme Taiwan helps interested software developers find relevant meetups that are occurring in Taiwan',
+    siteKeywords: 'Software Development, Software, Frontend, Front-end, backend, back-end, Javascript, JS, React, Mobile, development, meetups, meetings, Taichung, Taiwan, Taipei',
+    currentSpeakers: [
+      {
+        name: 'Jared M. Scott',
+        topic: 'Creating rich Static sites with GatsbyJS',
+        company: 'Variable.',
+        socialMedia: [
+          {
+            icon: '',
+            link: 'https://github.com/gcko'
+          },
+          {
+            icon: '',
+            link: 'https://twitter.com/JaredMScott'
+          }
+        ]
+      },
+      {
+        name: 'Evon Chen',
+        topic: 'Managing a startup company in Taiwan',
+        company: 'Variable.'
+      }
+    ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',

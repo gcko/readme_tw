@@ -4,11 +4,9 @@ import React from 'react'
 import './menu.sass'
 
 const MenuLink = ({link, label}) => (
-  <span className={'menu-item'}>
-    <Link className={'menu-link'} to={link}>
-      {label}
-    </Link>
-  </span>
+  <Link className={'menu-item menu-link'} to={link}>
+    {label}
+  </Link>
 )
 
 const Menu = ({ siteTitle }) => (

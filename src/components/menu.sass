@@ -1,19 +1,21 @@
+$menuBgColor: #483D8B
 .menu
     position: sticky
     top: 0
-    padding: .2rem .5rem .2rem 0
-    background: darkslateblue
+    z-index: 1 // keep it above the header div while scrolling
+    background: $menuBgColor
     .menu-links
         display: flex
         justify-content: center
-
-        .menu-item
-            + .menu-item
-                padding: 0 0 0 1rem
         .menu-link
+            padding: .5rem
             color: white
             text-decoration: none
             font-weight: normal
+            transition: background-color 400ms
+            &:hover
+                background: lighten($menuBgColor, 20%)
+
 
 @media (max-width: 576px)
     .menu
