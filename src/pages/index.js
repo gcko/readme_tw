@@ -12,7 +12,7 @@ const IndexPage = () => (
     <header className={'hero-header'}>
       <div className={'hero-content'}>
         <h1>readme.tw <small>The Taiwan Front-end meetup.</small></h1>
-        <p>Next Event: Friday January 10th, 2019 8PM</p>
+        <p className={'mb-0'}>Next Event: Friday January 10th, 2019 8PM</p>
         <p>@ Passenger Coffee Shop, Taichung <i className="fas fa-map-marker-alt"></i></p>
         <Speakers/>
       </div>

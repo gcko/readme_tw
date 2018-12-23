@@ -1,3 +1,7 @@
+$speakerBaseBgColor: #FFFFFF
+$gradientBaseColor: #ff9800
+$gradientShadow: darken($gradientBaseColor, 7%)
+
 %textElide
   -ms-text-overflow: ellipsis
   text-overflow: ellipsis
@@ -10,13 +14,10 @@
     align-items: center
     font-size: 1rem
     text-decoration: none
-    background: #fff
+    background: $speakerBaseBgColor
     padding: .1rem
-    background: linear-gradient(90deg, #ebf8e1 0%, #f69d3c 200%)
-    background-size: 200%
     &:hover
-      //background: linear-gradient(90deg, #ebf8e1 15%, #ebf8e1 99%, #f69d3c 99%)
-      animation: gradient-transition 1s linear
+      background: linear-gradient(45deg, $speakerBaseBgColor 95%, $gradientShadow 95%, $gradientBaseColor 96%)
     + a
       margin-top: .2rem
 
