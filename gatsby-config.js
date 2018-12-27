@@ -7,14 +7,15 @@ module.exports = {
       {
         name: 'Jared M. Scott',
         topic: 'Creating rich Static sites with GatsbyJS',
+        topicDescription: 'Learn how to use GatsbyJS to create rich websites using modern techniques',
         company: 'Variable.',
         socialMedia: [
           {
-            icon: '',
+            icon: 'github',
             link: 'https://github.com/gcko'
           },
           {
-            icon: '',
+            icon: 'twitter',
             link: 'https://twitter.com/JaredMScott'
           }
         ]

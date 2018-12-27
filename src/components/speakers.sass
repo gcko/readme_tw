@@ -1,3 +1,4 @@
+@import "variables"
 $speakerBaseBgColor: #FFFFFF
 $gradientBaseColor: #ff9800
 $gradientShadow: darken($gradientBaseColor, 7%)
@@ -21,27 +22,6 @@ $gradientShadow: darken($gradientBaseColor, 7%)
     + a
       margin-top: .2rem
 
-    img
-      position: relative
-      height: 40px
-      width: 40px
-      margin-bottom: 0
-      font-size: .3rem
-      @extend %textElide
-      &::after
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        content: ""
-        background-color: #fff
-        background-repeat: no-repeat
-        background-position: 3px 0
-        background-size: contain
-        background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20aria-hidden%3D%22true%22%20data-prefix%3D%22fas%22%20data-icon%3D%22user%22%20class%3D%22svg-inline--fa%20fa-user%20fa-w-14%22%20role%3D%22img%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M224%20256c70.7%200%20128-57.3%20128-128S294.7%200%20224%200%2096%2057.3%2096%20128s57.3%20128%20128%20128zm89.6%2032h-16.7c-22.2%2010.2-46.9%2016-72.9%2016s-50.6-5.8-72.9-16h-16.7C60.2%20288%200%20348.2%200%20422.4V464c0%2026.5%2021.5%2048%2048%2048h352c26.5%200%2048-21.5%2048-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z%22/%3E%3C/svg%3E")
-
     h2
       width: 8rem
       margin-bottom: 0
@@ -60,6 +40,69 @@ $gradientShadow: darken($gradientBaseColor, 7%)
       margin-left: .5rem
       @extend %textElide
 
+  img
+    position: relative
+    display: block
+    height: 40px
+    width: 40px
+    margin-bottom: 0
+    font-size: .3rem
+    @extend %textElide
+    &::after
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ""
+      background-color: #fff
+      background-repeat: no-repeat
+      background-position: 3px 0
+      background-size: contain
+      background-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20aria-hidden%3D%22true%22%20data-prefix%3D%22fas%22%20data-icon%3D%22user%22%20class%3D%22svg-inline--fa%20fa-user%20fa-w-14%22%20role%3D%22img%22%20viewBox%3D%220%200%20448%20512%22%3E%3Cpath%20fill%3D%22currentColor%22%20d%3D%22M224%20256c70.7%200%20128-57.3%20128-128S294.7%200%20224%200%2096%2057.3%2096%20128s57.3%20128%20128%20128zm89.6%2032h-16.7c-22.2%2010.2-46.9%2016-72.9%2016s-50.6-5.8-72.9-16h-16.7C60.2%20288%200%20348.2%200%20422.4V464c0%2026.5%2021.5%2048%2048%2048h352c26.5%200%2048-21.5%2048-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z%22/%3E%3C/svg%3E")
+  div.speaker
+    display: flex
+    max-width: 80vw
+    margin-top: 2rem
+    img
+      &::after
+        background-color: $flowContentBgColor
+    .speaker-details
+      margin-left: 1rem
+      h3
+        font-size: 1.2rem
+        .social-links
+          margin-left:  .5rem
+          a
+            color: $linkColor
+            transition: color 400ms
+            &:hover
+              color: $linkHoverColor
+              text-decoration: none
+            + a
+              margin-left: .3rem
+      .talk-info
+        $outerPadding: .3rem
+        width:  60vw
+        background: #FFFFFF
+        box-shadow: 0 0 5px 0 #616161
+        h2
+          font-size: 1.5rem
+          padding: .5rem $outerPadding
+          background-color: $menuBgColor
+          border-bottom: .1rem solid $menuBgLightColor
+          color: #FFFFFF
+          margin: 0
+        p
+          padding: .7rem $outerPadding $outerPadding $outerPadding
+          margin: 0
+
+
+    + .speaker
+      margin-top: 1rem
+
+
 @keyframes gradient-transition
   0%
     background-position-x: 0
@@ -67,3 +110,12 @@ $gradientShadow: darken($gradientBaseColor, 7%)
     background-position-x: 50%
   100%
     background-position-x: 100%
+
+
+@media (max-width: 576px)
+  .speaker-container
+    div.speaker
+      flex-direction: column
+      align-items: center
+      .speaker-details
+        margin-left: 0

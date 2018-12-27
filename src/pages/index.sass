@@ -1,3 +1,5 @@
+@import "../components/variables"
+
 header.hero-header
   position: relative
   display: flex
@@ -5,9 +7,8 @@ header.hero-header
   justify-content: flex-start
   flex-direction: column
   flex-wrap: nowrap
-
   min-height: 93vh
-  color: #FFFFFF
+  color: $textColor
   &::before
     position: fixed
     display: block
@@ -17,9 +18,8 @@ header.hero-header
     height: 102vh
     z-index: -1
     content: ""
-
     background-image: url("../images/IMG_0763.jpg")
-    background-color: #2ac197
+    background-color: $headerBgColor
     background-blend-mode: overlay
     background-repeat: no-repeat
     background-position: 50% 50%
@@ -30,5 +30,32 @@ header.hero-header
     > h1
       color: white
 
-.some-other-content
-  background: #FFFFFF // keeps the blur from bleeding through
+.header-buttons
+  justify-content: space-evenly
+  .button
+    padding: .5rem 1rem
+    background: transparent
+    color: $textColor
+    border-radius: 3px
+    border: 3px solid $buttonBorderColor
+    &:hover
+      color: $textHoverColor
+      background: $buttonHoverBgColor
+      text-decoration: none
+
+
+.layout-content
+  > section
+    // Styling for section direct descendents of the layout
+    background: $flowContentBgColor // keeps the blur from bleeding through
+    display: flex
+    flex-direction: column
+    align-items: center
+    > article
+      width: 80vw
+
+@media (max-width: 576px)
+  .layout-content
+    > section
+      > article
+        width: 100vw

@@ -35,6 +35,9 @@ const Layout = ({ bodyClass, children }) => (
         <div className={`layout-content${bodyClass ? ` ${bodyClass}` : ''}`} >
           {children}
         </div>
+        <footer>
+          Site Design inspired by <a href={'https://js.la/'}>js.la</a>. | Created by Jared M. Scott
+        </footer>
       </>
     )}
   />

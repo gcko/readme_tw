@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Speakers from '../components/speakers'
+import BigSpeaker from '../components/bigspeaker'
 
 import './index.sass'
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
@@ -15,13 +16,21 @@ const IndexPage = () => (
         <p className={'mb-0'}>Next Event: Friday January 10th, 2019 8PM</p>
         <p>@ Passenger Coffee Shop, Taichung <i className="fas fa-map-marker-alt"></i></p>
         <Speakers/>
+        <div className={'header-buttons mt-5 d-flex'}>
+          <a href={"#rsvp"} className={'button'}><i className="fas fa-ticket-alt"></i> RSVP for event</a>
+          <a href={"#mailing"} className={'button'}><i className="far fa-envelope"></i> Join mailing list</a>
+        </div>
       </div>
     </header>
-    <div className={'some-other-content'}>
-      <h2>Other Content</h2>
-      <p>I am just another piece of content somewhere else lower on the page</p>
-      <Link to="/page-2/">Go to page 2</Link>
-    </div>
+    <section>
+      <article>
+        <h2>Speakers</h2>
+        <BigSpeaker/>
+      </article>
+      <article>
+        <Link to="/page-2/">Go to page 2</Link>
+      </article>
+    </section>
   </Layout>
 )
 
