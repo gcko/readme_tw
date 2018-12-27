@@ -28,7 +28,13 @@ const IndexPage = () => (
         <BigSpeaker/>
       </article>
       <article>
-        <Link to="/page-2/">Go to page 2</Link>
+        <h2>When</h2>
+      </article>
+      <article>
+        <h2>Location</h2>
+        <p>
+          <Link to="/page-2/">Go to page 2</Link>
+        </p>
       </article>
     </section>
   </Layout>

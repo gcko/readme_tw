@@ -12,19 +12,20 @@ header.hero-header
   &::before
     position: fixed
     display: block
-    left: -1vw
-    top: -1vh
-    width: 102vw
-    height: 102vh
+    left: -5vw
+    top: -2vh
+    width: 110vw
+    height: 104vh
     z-index: -1
     content: ""
     background-image: url("../images/IMG_0763.jpg")
     background-color: $headerBgColor
-    background-blend-mode: overlay
+    background-blend-mode: multiply
     background-repeat: no-repeat
     background-position: 50% 50%
     background-size: cover
     filter: blur(6px)
+    transition: filter 1s
   .hero-content
     margin-top: 15vh
     > h1
@@ -43,7 +44,6 @@ header.hero-header
       background: $buttonHoverBgColor
       text-decoration: none
 
-
 .layout-content
   > section
     // Styling for section direct descendents of the layout
@@ -53,9 +53,20 @@ header.hero-header
     align-items: center
     > article
       width: 80vw
+      + article
+        margin-top: 2rem
 
-@media (max-width: 576px)
+@media (max-width: 479px)
   .layout-content
+    header.hero-header
+      &::before
+        filter: blur(0px)
+      .hero-content
+        width: 100vw
+        padding-left: 2.5vw
+        padding-right: 2.5vw
     > section
       > article
         width: 100vw
+        padding-left: 2.5vw
+        padding-right: 2.5vw

@@ -36,7 +36,7 @@ const Layout = ({ bodyClass, children }) => (
           {children}
         </div>
         <footer>
-          Site Design inspired by <a href={'https://js.la/'}>js.la</a>. | Created by Jared M. Scott
+          <span>Site Design inspired by <a href={'https://js.la/'}>js.la</a>. | Created by Jared M. Scott</span>
         </footer>
       </>
     )}
