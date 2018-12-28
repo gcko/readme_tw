@@ -10,7 +10,7 @@ header.hero-header
   min-height: 93vh
   color: $textColor
   &::before
-    position: fixed
+    position: absolute
     display: block
     left: -5vw
     top: -2vh
@@ -18,8 +18,9 @@ header.hero-header
     height: 104vh
     z-index: -1
     content: ""
-    background-image: url("../images/IMG_0763.jpg")
-    background-color: $headerBgColor
+    background: linear-gradient(0deg, $headerBgColor, $menuBgColor), url("../images/IMG_0763.jpg")
+    //background-image: url("../images/IMG_0763.jpg")
+    //background-color: $headerBgColor
     background-blend-mode: multiply
     background-repeat: no-repeat
     background-position: 50% 50%

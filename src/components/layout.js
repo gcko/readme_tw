@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Menu from './menu'
 import './reset.sass'
 import './layout.sass'
+import Footer from './footer'
 
 const Layout = ({ bodyClass, children }) => (
   <StaticQuery
@@ -35,9 +36,7 @@ const Layout = ({ bodyClass, children }) => (
         <div className={`layout-content${bodyClass ? ` ${bodyClass}` : ''}`} >
           {children}
         </div>
-        <footer>
-          <span>Site Design inspired by <a href={'https://js.la/'}>js.la</a>. | Created by Jared M. Scott</span>
-        </footer>
+        <Footer/>
       </>
     )}
   />
