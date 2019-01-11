@@ -1,6 +1,6 @@
 @import "variables"
-$speakerBaseBgColor: #FFFFFF
-$gradientBaseColor: #ff9800
+$speakerBaseBgColor: $buttonBorderColor
+$gradientBaseColor: rgba(255, 255, 255, 0)
 $gradientShadow: darken($gradientBaseColor, 7%)
 
 %textElide
@@ -16,35 +16,38 @@ $gradientShadow: darken($gradientBaseColor, 7%)
     font-size: 1rem
     text-decoration: none
     background: $speakerBaseBgColor
-    padding: .1rem
-    &:hover
-      background: linear-gradient(90deg, $speakerBaseBgColor 98.5%, $gradientShadow 98.5%, $gradientShadow 99%, $gradientBaseColor 99%)
+    background: linear-gradient(90deg, $speakerBaseBgColor 15.5%, $gradientBaseColor 15.5%)
+    //padding: .7rem
+    border: 3px solid #ffc107
+    color: $lightText
+    &:hover, &:focus, &:active
+      background: $speakerBaseBgColor
+      h1, h2
+        color: $darkText
     + a
       margin-top: .5rem
-
     h2
       width: 8rem
       margin-bottom: 0
-      margin-left: .5rem
-
+      padding-left: .5rem
       font-size: inherit
       font-weight: 300
-      color: initial
+      color: inherit
+      border-right: 1px solid $lightText
       @extend %textElide
     h1
       max-width: 20rem
       font-size: inherit
       font-weight: 300
-      color: initial
-      margin-bottom: 0
-      margin-left: .5rem
+      color: inherit
+      margin: 0
+      padding: 0 .5rem
       @extend %textElide
-
   img
     position: relative
     display: block
-    height: 40px
-    width: 40px
+    height: 75px
+    width: 75px
     margin-bottom: 0
     font-size: .3rem
     @extend %textElide
@@ -56,7 +59,7 @@ $gradientShadow: darken($gradientBaseColor, 7%)
       width: 100%
       height: 100%
       content: ""
-      background-color: #fff
+      background-color: $speakerBaseBgColor
       background-repeat: no-repeat
       background-position: 3px 0
       background-size: contain
@@ -77,7 +80,7 @@ $gradientShadow: darken($gradientBaseColor, 7%)
           a
             color: $linkColor
             transition: color 400ms
-            &:hover
+            &:hover, &:focus, &:active
               color: $linkHoverColor
               text-decoration: none
             + a
@@ -98,19 +101,8 @@ $gradientShadow: darken($gradientBaseColor, 7%)
         p
           padding: .7rem $outerPadding $outerPadding $outerPadding
           margin: 0
-
-
     + .speaker
       margin-top: 1rem
-
-
-@keyframes gradient-transition
-  0%
-    background-position-x: 0
-  50%
-    background-position-x: 50%
-  100%
-    background-position-x: 100%
 
 
 @media (max-width: 479px)

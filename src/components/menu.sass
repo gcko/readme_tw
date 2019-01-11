@@ -1,10 +1,11 @@
 @import "variables"
 
 .menu
+    position: -webkit-sticky
     position: sticky
     top: 0
     z-index: 1 // keep it above the header div while scrolling
-    background: $menuBgColor
+    background-color: $menuBgColor
     border-bottom: 0.1rem solid #7a6ec0
     .menu-links
         display: flex
@@ -15,10 +16,10 @@
             text-decoration: none
             font-weight: normal
             transition: background-color 400ms
-            &:hover
+            &:hover, &:focus, &:active
                 background: $menuBgLightColor
 
-
-@media (max-width: 479px)
-    .menu
-        position: relative
+//
+//@media (max-width: 479px)
+//    .menu
+//        position: relative

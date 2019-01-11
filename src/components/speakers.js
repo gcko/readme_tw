@@ -6,22 +6,30 @@ import './speakers.sass'
 
 export const generateId = (name='') => name.replace(/\s/gi, '')
 
-const Speaker = ({speaker}, key) => (
-  <a key={key} href={`#${generateId(speaker.name)}`} className={'speaker'}>
-    <img src={"#"} alt={`keynote speaker ${speaker.name}`}/><h2>{speaker.name}</h2><h1>{speaker.topic}</h1>
-  </a>
-)
+const Speaker = ({speaker, key}) => {
+  const imageSrc = speaker.image ? speaker.image.childImageSharp.resize.src : '#'
+  return (
+    <a key={key} href={`#${generateId(speaker.name)}`} className={'speaker'}>
+      <img src={imageSrc} alt={`keynote speaker ${speaker.name}`}/><h2>{speaker.name}</h2><h1>{speaker.topic}</h1>
+    </a>
+  )
+}
 
 export const Speakers = () => (
   <StaticQuery
     query={graphql`
       query SiteSpeakersQuery {
-        site {
-          siteMetadata {
-            currentSpeakers {
-              name
-              topic
-              company
+        speakersJson {
+          current {
+            name
+            topic
+            company
+            image {
+              childImageSharp {
+                resize(width:75 height:75 quality:100 cropFocus:NORTH) {
+                  src
+                }
+              }
             }
           }
         }
@@ -29,7 +37,7 @@ export const Speakers = () => (
     `}
     render={data => (
       <div className={'speaker-container'}>
-        {data.site.siteMetadata.currentSpeakers.map( (speaker, idx) => <Speaker key={idx} speaker={speaker}/> )}
+        {data.speakersJson.current.map( (speaker, idx) => <Speaker key={idx} speaker={speaker} /> )}
       </div>
     )}
   />
