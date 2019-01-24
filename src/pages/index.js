@@ -10,12 +10,14 @@ import Datetime from '../components/datetime'
 import Location from '../components/location'
 import Buttons from '../components/buttons'
 import LinkButton from '../components/linkbutton'
+import Image from '../components/image'
 
 
 const IndexPage = () => (
   <Layout bodyClass={'index-page'}>
     <header className={'hero-header'}>
       <div className={'hero-content'}>
+        {/*<Image/>*/}
         <h1>readme.tw <small>The Taiwan Front-end meetup.</small></h1>
         <p className={'mb-0'}>Next Event: <Datetime/></p>
         <p><i className="fas fa-map-marker-alt"/> <Location/></p>

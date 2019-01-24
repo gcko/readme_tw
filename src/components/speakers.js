@@ -6,10 +6,10 @@ import './speakers.sass'
 
 export const generateId = (name='') => name.replace(/\s/gi, '')
 
-const Speaker = ({speaker, key}) => {
+const Speaker = ({speaker}) => {
   const imageSrc = speaker.image ? speaker.image.childImageSharp.resize.src : '#'
   return (
-    <a key={key} href={`#${generateId(speaker.name)}`} className={'speaker'}>
+    <a href={`#${generateId(speaker.name)}`} className={'speaker'}>
       <img src={imageSrc} alt={`keynote speaker ${speaker.name}`}/><h2>{speaker.name}</h2><h1>{speaker.topic}</h1>
     </a>
   )
