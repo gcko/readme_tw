@@ -21,9 +21,18 @@
                 flex-basis: 30vw
                 .menu-link
                     margin: 0
+                    text-transform: none
+                    font-size: 1.7rem
+                    padding: .1rem .5rem
+                    .wf-robotomono-n4-active &
+                        font-family: "Roboto Mono"
+                        letter-spacing: -.1rem
+                        > span
+                            letter-spacing: -.4rem
+
                     &:hover, &:focus, &:active
                         background: none
-                        text-shadow: 0 0 15px $textColor
+                        text-shadow: 0 0 2rem $textColor
 
         .menu-link
             padding: $menuLinkTBPadding $menuLinkLRPadding

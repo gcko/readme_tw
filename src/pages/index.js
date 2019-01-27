@@ -18,9 +18,13 @@ const IndexPage = () => (
     <header className={'hero-header'}>
       <div className={'hero-content'}>
         {/*<Image/>*/}
-        <h1>readme.tw <small>The Taiwan Front-end meetup.</small></h1>
-        <p className={'mb-0'}>Next Event: <Datetime/></p>
-        <p><i className="fas fa-map-marker-alt"/> <Location/></p>
+        <h1>readme.tw <small>Taichung Development meetup.</small></h1>
+        <h4 className={'mb-0'}>Next Event</h4>
+        <p><Datetime/></p>
+        <h4 className={'mb-0'}>At</h4>
+        <p>
+          <a href={"#location"}><i className="fas fa-map-marker-alt"/> <Location/></a>
+        </p>
         <Speakers/>
         <Buttons className={'header-buttons'}>
           <LinkButton text={'RSVP for event'} link={'#rsvp'} icon={'fa-ticket-alt'}/>
@@ -41,7 +45,7 @@ const IndexPage = () => (
         <h2>When</h2>
         <Datetime/>
       </article>
-      <article>
+      <article id={'location'}>
         <h2>Location</h2>
         <Location showMap={true}/>
       </article>

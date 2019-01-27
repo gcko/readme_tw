@@ -9,9 +9,9 @@ const MenuGroup = ({children}) => (
   </div>
 )
 
-const MenuLink = ({link, label}) => (
+const MenuLink = ({link, children}) => (
   <Link className={'menu-item menu-link'} to={link}>
-    {label}
+    {children}
   </Link>
 )
 
@@ -22,12 +22,12 @@ class Menu extends React.Component {
       <div className={`menu${this.props.scrollAtTop ? ' at-top' : ''}`}>
         <div className={'menu-links'}>
           <MenuGroup>
-            <MenuLink link={'/'} label={this.props.siteTitle} />
+            <MenuLink link={'/'}>R<span>e</span>:</MenuLink>
           </MenuGroup>
           <MenuGroup>
-            <MenuLink link={'/past-events/'} label={'Past Events'} />
-            <MenuLink link={'/faq/'} label={'FAQ'} />
-            <MenuLink link={'/sponsorship/'} label={'Sponsorship'} />
+            <MenuLink link={'/past-events/'}>Past Events</MenuLink>
+            <MenuLink link={'/faq/'}>FAQ</MenuLink>
+            <MenuLink link={'/sponsorship/'}>Sponsorship</MenuLink>
           </MenuGroup>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Image = () => (
       query {
         placeholderImage: file(relativePath: { eq: "readme-icon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 128) {
+            fluid(maxWidth: 256) {
               ...GatsbyImageSharpFluid
             }
           }

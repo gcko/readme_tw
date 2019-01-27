@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'readme Taiwan',
-    siteDescription: 'readme Taiwan helps interested software developers find relevant meetups that are occurring in Taiwan',
+    title: 'Taichung Dev Meetup',
+    siteDescription: 'Readme.tw helps interested software developers find relevant meetups that are occurring in Taiwan',
     siteKeywords: 'Software Development, Software, Frontend, Front-end, backend, back-end, Javascript, JS, React, Mobile, development, meetups, meetings, Taichung, Taiwan, Taipei',
     pastEvents: [],
     currentEvent: {
@@ -47,6 +47,14 @@ module.exports = {
         precision: 8
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto Mono']
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
