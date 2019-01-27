@@ -26,7 +26,7 @@ class Menu extends React.Component {
           </MenuGroup>
           <MenuGroup>
             <MenuLink link={'/past-events/'}>Past Events</MenuLink>
-            <MenuLink link={'/faq/'}>FAQ</MenuLink>
+            <MenuLink link={'/aboutus/'}>About Us</MenuLink>
             <MenuLink link={'/sponsorship/'}>Sponsorship</MenuLink>
           </MenuGroup>
         </div>
