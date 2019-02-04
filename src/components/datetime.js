@@ -18,7 +18,7 @@ const Datetime = () => (
     `}
     render={data => (
       <span className={'datetime'}>
-        {Luxon.fromSeconds(data.site.siteMetadata.currentEvent.unixTime, {zone: 'Asia/Taipei'}).toFormat("T, DDDD")}
+        Starts at {Luxon.fromSeconds(data.site.siteMetadata.currentEvent.unixTime, {zone: 'Asia/Taipei'}).toFormat("T, DDDD")}
       </span>
     )}
   />

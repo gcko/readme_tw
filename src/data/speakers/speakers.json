@@ -2,10 +2,10 @@
   "current": [
     {
       "name": "Jared M. Scott",
-      "topic": "Creating rich Static sites with GatsbyJS",
-      "topicDescription": "Learn how to use GatsbyJS to create rich websites using modern techniques",
+      "topic": "Creating rich Static sites with GatsbyJS & React",
+      "topicDescription": "Learn how to use GatsbyJS to create rich websites using modern techniques. Talk will touch on React, development lifecycle, and deployment",
       "company": "Variable.",
-      "image": "../../images/speakers/EVN_5997.jpg",
+      "image": "../../images/speakers/jared_1_small.jpg",
       "socialMedia": [
         {
           "icon": "github",
@@ -16,11 +16,6 @@
           "link": "https://twitter.com/JaredMScott"
         }
       ]
-    },
-    {
-      "name": "Evon Chen",
-      "topic": "Managing a startup company in Taiwan",
-      "company": "Variable."
     }
   ]
 }

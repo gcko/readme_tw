@@ -5,10 +5,12 @@ module.exports = {
     siteKeywords: 'Software Development, Software, Frontend, Front-end, backend, back-end, Javascript, JS, React, Mobile, development, meetups, meetings, Taichung, Taiwan, Taipei',
     pastEvents: [],
     currentEvent: {
-      unixTime: 1547121600,
+      unixTime: 1549967400,
       location: 'Passenger, Taichung',
-      locationLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116444.80245764508!2d120.7084002!3d24.21027895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9be446dd93%3A0x246540f9df2293dd!2sPassenger!5e0!3m2!1sen!2stw!4v1545975181667'
+      locationLink: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.5516717548307!2d120.65709231563136!3d24.15237798439281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9be446dd93%3A0x246540f9df2293dd!2sPassenger!5e0!3m2!1sen!2stw!4v1549291752755',
+      rsvpLink: '#rsvp'
     },
+    mailingListLink: 'https://mailchi.mp/83e22a017c9f/readmetw-subscribe'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

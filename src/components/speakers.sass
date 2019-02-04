@@ -12,11 +12,12 @@ $gradientShadow: darken($gradientBaseColor, 7%)
 .speaker-container
   a.speaker
     display: flex
+    max-width: 98vw
     align-items: center
     font-size: 1rem
     text-decoration: none
     background: $speakerBaseBgColor
-    background: linear-gradient(90deg, $speakerBaseBgColor 15.5%, $gradientBaseColor 15.5%)
+    background: linear-gradient(90deg, $speakerBaseBgColor 78px, $gradientBaseColor 78px)
     //padding: .7rem
     border: 3px solid #ffc107
     color: $lightText
@@ -46,8 +47,16 @@ $gradientShadow: darken($gradientBaseColor, 7%)
   img
     position: relative
     display: block
-    height: 75px
-    width: 75px
+    &.small
+      $smallSize: 75px
+      height: $smallSize
+      width: $smallSize
+      min-width: $smallSize
+    &.medium
+      $mediumSize: 125px
+      height: $mediumSize
+      width: $mediumSize
+      min-width: $mediumSize
     margin-bottom: 0
     font-size: .3rem
     @extend %textElide

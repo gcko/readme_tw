@@ -16,7 +16,7 @@ const AboutUsPage = () => (
 
     </p>
 
-    <Link to="/">Back to the home</Link>
+    <Link to="/">Back to home</Link>
   </Layout>
 )
 

@@ -2,7 +2,6 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Speakers from '../components/speakers'
-import BigSpeaker from '../components/bigspeaker'
 
 import './index.sass'
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
@@ -10,10 +9,8 @@ import Datetime from '../components/datetime'
 import Location from '../components/location'
 import Buttons from '../components/buttons'
 import LinkButton from '../components/linkbutton'
-import Image from '../components/image'
 
-
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout bodyClass={'index-page'}>
     <header className={'hero-header'}>
       <div className={'hero-content'}>
@@ -27,18 +24,18 @@ const IndexPage = () => (
         </p>
         <Speakers/>
         <Buttons className={'header-buttons'}>
-          <LinkButton text={'RSVP for event'} link={'#rsvp'} icon={'fa-ticket-alt'}/>
-          <LinkButton text={'Join mailing list'} link={'#mailing'} icon={'fa-envelope'}/>
+          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'}/>
+          <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </div>
     </header>
     <section>
       <article>
         <h2>Speakers</h2>
-        <BigSpeaker/>
+        <Speakers format={'medium'}/>
         <Buttons className={'article-buttons'}>
-          <LinkButton text={'RSVP for event'} link={'#rsvp'} icon={'fa-ticket-alt'}/>
-          <LinkButton text={'Join mailing list'} link={'#mailing'} icon={'fa-envelope'}/>
+          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'}/>
+          <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </article>
       <article>
@@ -52,5 +49,18 @@ const IndexPage = () => (
     </section>
   </Layout>
 )
+
+export const query = graphql`
+  query IndexPageQuery {
+    site {
+      siteMetadata {
+        mailingListLink
+        currentEvent {
+          rsvpLink
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
