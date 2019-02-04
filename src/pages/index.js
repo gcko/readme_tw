@@ -24,7 +24,7 @@ const IndexPage = ({data}) => (
         </p>
         <Speakers/>
         <Buttons className={'header-buttons'}>
-          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'}/>
+          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
           <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </div>
@@ -34,7 +34,7 @@ const IndexPage = ({data}) => (
         <h2>Speakers</h2>
         <Speakers format={'medium'}/>
         <Buttons className={'article-buttons'}>
-          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'}/>
+          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
           <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </article>
