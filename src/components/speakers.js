@@ -7,11 +7,12 @@ import BigSpeaker from './bigspeaker'
 
 export const generateId = (name='') => name.replace(/\s/gi, '')
 
-const Speaker = ({speaker, format}) => {
+const Speaker = ({topic, format}) => {
+  const speaker = topic.speaker
   const imageSrc = speaker.image ? speaker.image.childImageSharp.small.src : '#'
   return (
     <a href={`#${generateId(speaker.name)}`} className={'speaker'}>
-      <img src={imageSrc} className={format} alt={`keynote speaker ${speaker.name}`}/><h2>{speaker.name}</h2><h1>{speaker.topic}</h1>
+      <img src={imageSrc} className={format} alt={`keynote speaker ${speaker.name}`}/><h2>{speaker.name}</h2><h1>{topic.topic}</h1>
     </a>
   )
 }
@@ -22,25 +23,29 @@ export const Speakers = (props) => {
     <StaticQuery
       query={graphql`
       query SiteSpeakersQuery {
-        speakersJson {
+        eventsJson {
           current {
-            name
-            topic
-            topicDescription
-            company
-            image {
-              childImageSharp {
-                small: resize(width:75 height:75 quality:100 cropFocus:NORTH) {
-                  src
+            topics {
+              topic
+              topicDescription
+              speaker {
+                name
+                company
+                image {
+                  childImageSharp {
+                    small: resize(width:75 height:75 quality:100 cropFocus:NORTH) {
+                      src
+                    }
+                    medium: resize(width:125 height:125 quality:100 cropFocus:NORTH) {
+                      src
+                    }
+                  }
                 }
-                medium: resize(width:125 height:125 quality:100 cropFocus:NORTH) {
-                  src
+                socialMedia {
+                  icon
+                  link
                 }
               }
-            }
-            socialMedia {
-              icon
-              link
             }
           }
         }
@@ -48,7 +53,7 @@ export const Speakers = (props) => {
     `}
       render={data => (
         <div className={'speaker-container'}>
-          {data.speakersJson.current.map( (speaker, idx) => (props.format === 'small') ? <Speaker key={idx} speaker={speaker} format={props.format} /> : <BigSpeaker key={idx} speaker={speaker} format={props.format} />)}
+          {data.eventsJson.current.topics.map( (topic, idx) => (props.format === 'small') ? <Speaker key={idx} topic={topic} format={props.format} /> : <BigSpeaker key={idx} topic={topic} format={props.format} />)}
         </div>
       )}
     />

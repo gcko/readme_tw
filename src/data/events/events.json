@@ -1,0 +1,85 @@
+{
+  "current": {
+    "unixTime": 1552476600,
+    "location": "Passenger, Taichung",
+    "locationLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.5516717548307!2d120.65709231563136!3d24.15237798439281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9be446dd93%3A0x246540f9df2293dd!2sPassenger!5e0!3m2!1sen!2stw!4v1549291752755",
+    "rsvpLink": "http://meetu.ps/e/GmH4j/yBC6H/f",
+    "topics": [
+      {
+        "topic": "Deep Dive on Pendo & Google Analytics",
+        "topicDescription": "In this talk we will  discuss how to get the most out of the two largest analytics suites available on the web. We will focus on iterative design based on qualitative data.",
+        "speaker": {
+          "name": "Jared M. Scott",
+          "company": "Variable.",
+          "image": "../../images/speakers/jared_1_small.jpg",
+          "socialMedia": [
+            {
+              "icon": "github",
+              "link": "https://github.com/gcko"
+            },
+            {
+              "icon": "twitter",
+              "link": "https://twitter.com/JaredMScott"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "past": [
+    {
+      "unixTime": 1549967400,
+      "location": "Passenger, Taichung",
+      "locationLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.5516717548307!2d120.65709231563136!3d24.15237798439281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9be446dd93%3A0x246540f9df2293dd!2sPassenger!5e0!3m2!1sen!2stw!4v1549291752755",
+      "rsvpLink": "http://meetu.ps/e/GmH4j/yBC6H/f",
+      "topics": [
+        {
+          "topic": "Creating rich Static sites with GatsbyJS & React",
+          "topicDescription": "Learn how to use GatsbyJS to create rich websites using modern techniques. Talk will touch on React, development lifecycle, and deployment",
+          "speaker": {
+            "name": "Jared M. Scott",
+            "company": "Variable.",
+            "image": "../../images/speakers/jared_1_small.jpg",
+            "socialMedia": [
+              {
+                "icon": "github",
+                "link": "https://github.com/gcko"
+              },
+              {
+                "icon": "twitter",
+                "link": "https://twitter.com/JaredMScott"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "unixTime": 1479807000,
+      "location": "小原咖啡, no.94., Jingming 1st st. West Dist., Taichung City",
+      "locationLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.1159284437405!2d120.65442746405532!3d24.155464869269792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9a7dbc40c7%3A0x9d8b1e0008ade973!2sNo.+94%2C+Jingming+1st+Street%2C+West+District%2C+Taichung+City%2C+403!5e0!3m2!1sen!2stw!4v1550031875397",
+      "rsvpLink": "",
+      "topics": [
+        {
+          "topic": "Representing large data sets through graphs",
+          "topicDescription": "An exploration of HighchartsJS and how it can be used effectively with big data sets.",
+          "speaker": {
+            "name": "Jared M. Scott",
+            "company": "Variable.",
+            "image": "../../images/speakers/jared_1_small.jpg",
+            "socialMedia": [
+              {
+                "icon": "github",
+                "link": "https://github.com/gcko"
+              },
+              {
+                "icon": "twitter",
+                "link": "https://twitter.com/JaredMScott"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 import React from 'react'
 import {generateId} from '../components/speakers'
 
-const BigSpeaker = ({speaker, format}, key) => {
+const BigSpeaker = ({topic, format}, key) => {
+  const speaker = topic.speaker
   const imageSrc = speaker.image ? speaker.image.childImageSharp.medium.src : '#'
 
   return (
@@ -16,8 +17,8 @@ const BigSpeaker = ({speaker, format}, key) => {
           }
         </h3>
         <div className={'talk-info'}>
-          <h2>{speaker.topic}</h2>
-          <p>{speaker.topicDescription}</p>
+          <h2>{topic.topic}</h2>
+          <p>{topic.topicDescription}</p>
         </div>
       </div>
     </div>

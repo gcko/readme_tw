@@ -5,8 +5,8 @@ import Speakers from '../components/speakers'
 
 import './index.sass'
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
-import Datetime from '../components/datetime'
-import Location from '../components/location'
+import CurrentDatetime from '../components/datetime'
+import CurrentLocation from '../components/location'
 import Buttons from '../components/buttons'
 import LinkButton from '../components/linkbutton'
 
@@ -17,34 +17,34 @@ const IndexPage = ({data}) => (
         {/*<Image/>*/}
         <h1>readme.tw <small>Taichung Development meetup.</small></h1>
         <h4 className={'mb-0'}>Next Event</h4>
-        <p><Datetime/></p>
+        <p><CurrentDatetime/></p>
         <h4 className={'mb-0'}>At</h4>
         <p>
-          <a href={"#location"}><i className="fas fa-map-marker-alt"/> <Location/></a>
+          <a href={"#location"}><i className="fas fa-map-marker-alt"/> <CurrentLocation/></a>
         </p>
         <Speakers/>
         <Buttons className={'header-buttons'}>
-          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
+          <LinkButton text={'RSVP for event'} link={data.eventsJson.current.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
           <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </div>
     </header>
     <section>
       <article>
-        <h2>Speakers</h2>
+        <h2 className={'speaker-header'}>Speakers</h2>
         <Speakers format={'medium'}/>
         <Buttons className={'article-buttons'}>
-          <LinkButton text={'RSVP for event'} link={data.site.siteMetadata.currentEvent.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
+          <LinkButton text={'RSVP for event'} link={data.eventsJson.current.rsvpLink} icon={'fa-ticket-alt'} external={true}/>
           <LinkButton text={'Join mailing list'} link={data.site.siteMetadata.mailingListLink} icon={'fa-envelope'} external={true}/>
         </Buttons>
       </article>
       <article>
         <h2>When</h2>
-        <Datetime/>
+        <CurrentDatetime/>
       </article>
       <article id={'location'}>
         <h2>Location</h2>
-        <Location showMap={true}/>
+        <CurrentLocation showMap={true}/>
       </article>
     </section>
   </Layout>
@@ -55,9 +55,11 @@ export const query = graphql`
     site {
       siteMetadata {
         mailingListLink
-        currentEvent {
-          rsvpLink
-        }
+      }
+    }
+    eventsJson {
+      current {
+        rsvpLink
       }
     }
   }

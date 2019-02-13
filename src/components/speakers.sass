@@ -76,7 +76,8 @@ $gradientShadow: darken($gradientBaseColor, 7%)
   div.speaker
     display: flex
     max-width: 80vw
-    margin-top: 2rem
+    + div.speaker
+      margin-top: 2rem
     img
       &::after
         background-color: $flowContentBgColor
