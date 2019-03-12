@@ -1,9 +1,10 @@
 import React from 'react'
+import { OutboundLink} from 'gatsby-plugin-google-analytics'
 
 import './footer.sass'
 const Footer = () => (
   <footer>
-    <span>Site Design inspired by <a href={'https://js.la/'}>js.la</a>. | Created by Jared M. Scott</span>
+    <span>Site Design inspired by <OutboundLink href={'https://js.la/'} target={'_blank'}>js.la</OutboundLink>. | Created by Jared M. Scott</span>
   </footer>
 )
 
