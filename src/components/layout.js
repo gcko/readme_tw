@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import { sendUserScrolledPageEvent } from './utils/gaevents'
 
 import Menu from './menu'
 import './reset.sass'
@@ -13,7 +14,8 @@ class Layout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      scrollAtTop: true
+      scrollAtTop: true,
+      scrolledAtLeastOnce: false
     }
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -28,7 +30,15 @@ class Layout extends React.Component {
   }
 
   handleScroll(e) {
-    this.setState({scrollAtTop: this.isScrollAtTop()})
+    if (!this.state['scrolledAtLeastOnce']) {
+      const path = (window.location && window.location.pathname) ?
+        window.location.pathname : undefined
+      sendUserScrolledPageEvent(path)
+    }
+    this.setState({
+      scrollAtTop: this.isScrollAtTop(),
+      scrolledAtLeastOnce: true // always send true
+    })
   }
 
   isScrollAtTop() {
