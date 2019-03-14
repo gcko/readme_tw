@@ -17,12 +17,11 @@ const CAT_USER_ACTION = 'userAction'
 // List of Actions
 const ACT_SCROLL = 'scroll'
 
-const ga = window.ga
 const DEFAULT_CATEGORY = 'default'
 const DEFAULT_ACTION = 'default'
 const DEFAULT_LABEL = 'default'
 const DEFAULT_VALUE = 0
-const isGAEnabled = () => window.ga != null
+const isGAEnabled = () => window != null ? window.ga != null : false
 
 const sendEvent = (eventCategory = DEFAULT_CATEGORY,
                    eventAction = DEFAULT_ACTION,
@@ -33,7 +32,7 @@ const sendEvent = (eventCategory = DEFAULT_CATEGORY,
     return
   }
   const hitType = 'event'
-  ga('send', {
+  window.ga('send', {
     hitType,
     eventCategory,
     eventAction,
