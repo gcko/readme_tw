@@ -15,6 +15,7 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-source-strapi": "0.0.7",
     "gatsby-transformer-json": "^2.1.7",
     "gatsby-transformer-sharp": "^2.1.8",
     "luxon": "^1.8.3",
