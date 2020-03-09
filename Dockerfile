@@ -26,4 +26,4 @@ WORKDIR /code
 COPY ./package.json /code/
 
 #RUN npm install
-RUN yarn install
+RUN yarn cache clean && yarn install
