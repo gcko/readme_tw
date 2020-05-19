@@ -15,14 +15,14 @@
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.48",
-    "gatsby-source-strapi": "0.0.10",
+    "gatsby-source-strapi": "0.0.12",
     "gatsby-transformer-json": "^2.2.26",
     "gatsby-transformer-sharp": "^2.3.16",
     "luxon": "^1.22.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^6.0.0"
   },
   "keywords": [
     "gatsby"
@@ -38,7 +38,7 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "gatsby-cli": "^2.9.0",
-    "prettier": "^1.15.2"
+    "prettier": "^2.0.5"
   },
   "repository": {
     "type": "git",
