@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { sendUserScrolledPageEvent } from './utils/gaevents'
 
@@ -21,17 +21,22 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({scrollAtTop: this.isScrollAtTop()})
-    window.addEventListener('scroll', this.handleScroll, {passive: true});
+		if (typeof window !== `undefined`) {
+    	this.setState({scrollAtTop: this.isScrollAtTop()})
+			window.addEventListener('scroll', this.handleScroll, {passive: true});
+		}
+
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+		if (typeof window !== `undefined`) {
+			window.removeEventListener('scroll', this.handleScroll);
+		}
   }
 
   handleScroll(e) {
     if (!this.state['scrolledAtLeastOnce']) {
-      const path = (window.location && window.location.pathname) ?
+      const path = (typeof window !== `undefined` && window.location && window.location.pathname) ?
         window.location.pathname : undefined
       sendUserScrolledPageEvent(path)
     }
@@ -63,6 +68,7 @@ class Layout extends React.Component {
           <>
             <Helmet
               title={data.site.siteMetadata.title}
+							defer={false}
               meta={[
                 { name: 'description', content: data.site.siteMetadata.siteDescription },
                 { name: 'keywords', content: data.site.siteMetadata.siteKeywords},

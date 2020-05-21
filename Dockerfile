@@ -1,5 +1,5 @@
-FROM node:10
-MAINTAINER Jared Scott <jared@variable.team>
+FROM node:lts
+MAINTAINER Jared Scott <jared.scott@variable.team>
 
 RUN apt-get update \
     && apt-get install -y \

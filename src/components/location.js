@@ -19,17 +19,19 @@ const CurrentLocation = ({showMap}) => (
   <StaticQuery
     query={graphql`
       query EventLocationQuery {
-        eventsJson {
-          current {
-            location
-            locationLink
-          }
-        }
+				allStrapiEvent(sort: {fields: Time, order: DESC}, limit: 1) {
+					edges {
+						node {
+							Location
+							LocationLink
+						}
+					}
+				}
       }
     `}
     render={data => (
-     <Location showMap={showMap} location={data.eventsJson.current.location}
-               locationLink={data.eventsJson.current.locationLink} />
+     <Location showMap={showMap} location={data.allStrapiEvent.edges[0].node.location}
+               locationLink={data.allStrapiEvent.edges[0].node.locationLink} />
     )}
   />
 )

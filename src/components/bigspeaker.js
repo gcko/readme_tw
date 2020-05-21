@@ -12,7 +12,7 @@ const BigSpeaker = ({topic, format}, key) => {
         <h3>{speaker.name}
           {(speaker.socialMedia && speaker.socialMedia.length > 0) &&
           <span className={'social-links'}>
-            {speaker.socialMedia.map( (item, idx) => <a href={item.link} target={'_blank'} key={idx}><i className={`fab fa-${item.icon}`}/></a> )}
+            {speaker.socialMedia.map( (item, idx) => <a href={item.link} target={'_blank'} rel={`noopener noreferrer`} key={idx}><i className={`fab fa-${item.icon}`}/></a> )}
           </span>
           }
         </h3>
