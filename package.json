@@ -19,7 +19,7 @@
     "gatsby-transformer-json": "^2.2.26",
     "gatsby-transformer-sharp": "^2.3.16",
     "luxon": "^1.22.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^6.0.0"
